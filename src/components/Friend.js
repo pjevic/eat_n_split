@@ -2,9 +2,11 @@
 
 import Button from "./Button";
 
-export default function Friend({ friend }) {
+export default function Friend({ friend, onSelectedFriend, selectedFriend }) {
+  const isSelected = selectedFriend?.id === friend.id;
+
   return (
-    <li>
+    <li className={isSelected ? "selected" : ""}>
       <img src={friend.image} alt={friend.name} />
       <h3>{friend.name}</h3>
 
@@ -20,7 +22,9 @@ export default function Friend({ friend }) {
         </p>
       )}
 
-      <Button>Select</Button>
+      <Button onClick={() => onSelectedFriend(friend)}>
+        {isSelected ? "Close" : "Select"}
+      </Button>
     </li>
   );
 }
