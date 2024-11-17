@@ -13,9 +13,7 @@ export default function Friend({ friend }) {
           You owe {friend.name} {Math.abs(friend.balance)}€
         </p>
       )}
-      {friend.balance === 0 && (
-        <p className="">You and {friend.name} are even</p>
-      )}
+      {friend.balance === 0 && <p className="">You and {friend.name} are even</p>}
       {friend.balance > 0 && (
         <p className="green">
           {friend.name} owes you {friend.balance}€
