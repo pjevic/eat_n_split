@@ -2,6 +2,7 @@
 
 import Button from "./components/Button";
 import FormAddFriend from "./components/FormAddFriend";
+import FormSplitBill from "./components/FormSplitBill";
 import FriendsList from "./components/FriendsList";
 
 export default function App() {
@@ -12,6 +13,8 @@ export default function App() {
         <FormAddFriend />
         <Button>Add friend</Button>
       </div>
+
+      <FormSplitBill />
     </div>
   );
 }
