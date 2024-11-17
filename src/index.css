@@ -22,6 +22,7 @@ html {
 body {
   height: 100vh;
   color: #495057;
+  font-size: 1.6rem;
   box-sizing: border-box;
 
   display: flex;
