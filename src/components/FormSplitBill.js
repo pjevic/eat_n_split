@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-export default function FormSplitBill({ selectedFriend, onSplitBill }) {
+export default function FormSplitBill({ selectedFriend, onSplitBill, key }) {
   const [bill, setBill] = useState("");
   const [paidByUser, setPaidByUser] = useState("");
   const [whoIsPaying, setWhoIsPaying] = useState("user");
@@ -19,7 +19,7 @@ export default function FormSplitBill({ selectedFriend, onSplitBill }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="form-split-bill">
+    <form key={key} onSubmit={handleSubmit} className="form-split-bill">
       <h2>Split the bill with {selectedFriend.name}</h2>
 
       <label>💰 Bill value</label>
